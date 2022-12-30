@@ -1,0 +1,13 @@
+.left{
+    border-radius: 10px;
+}
+.right{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media (max-width: 1023px) { 
+    .right{
+        border-radius: 10px;
+    }
+}

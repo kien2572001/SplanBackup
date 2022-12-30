@@ -1,0 +1,12 @@
+{{- if .Values.php }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "common.names.fullname" . }}-php
+  labels:
+    {{ include "common.labels.standard" . | nindent 4 }}
+data:
+  {{- range $config, $value := .Values.php }}
+  {{ printf "PHP.%s" $config }}: {{ $value | quote }}
+  {{- end }}
+{{- end }}

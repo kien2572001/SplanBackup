@@ -1,0 +1,12 @@
+{{- if index .Values "php-fpm" }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "common.names.fullname" . }}-php-fpm
+  labels:
+    {{ include "common.labels.standard" . | nindent 4 }}
+data:
+  {{- range $config, $value := (index .Values "php-fpm") }}
+  {{ printf "PHP_FPM.%s" $config }}: {{ $value | quote }}
+  {{- end }}
+{{- end }}

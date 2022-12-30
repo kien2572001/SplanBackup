@@ -1,0 +1,15 @@
+dependencies:
+- name: common
+  repository: https://sun-asterisk-research.github.io/helm-charts
+  version: 1.1.0
+- name: beanstalkd
+  repository: https://sun-asterisk-research.github.io/helm-charts
+  version: 0.1.0
+- name: mariadb
+  repository: https://charts.bitnami.com/bitnami
+  version: 11.1.7
+- name: redis
+  repository: https://charts.bitnami.com/bitnami
+  version: 17.0.10
+digest: sha256:558c2810784195e12e5c0a2050b173b5ce17ede6ee002304e7078dc6b88cf195
+generated: "2022-12-12T17:21:06.871762134+07:00"
